@@ -1,0 +1,39 @@
+\section{Preventivo costi}
+
+Sulla base della precedente analisi è emersa la seguente distribuzione orari con il corrispondente prospetto economico:
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \arrayrulecolor{black} % Colore del bordo della tabella
+    % Definiamo la colonna grigio chiaro per la prima e l'ultima colonna
+    \begin{tabular}{|>{\bfseries}c|c|c|c|c|c|c|>{\bfseries}c|}
+        \hline
+        % Prima riga - Grigio molto scuro, testo bianco in grassetto
+        \rowcolor{gray!70} 
+        \color{white}\textbf{Ruolo} & \color{white}\textbf{Costo orario (\euro/h)} & \color{white}\textbf{Ore (h)} & \color{white}\textbf{Costo (\euro)} \\
+        \hline
+        % Righe alternate con bianco e grigio chiaro
+        \color{black}\textbf{Responsabile} & 30 & 68 & 2040  \\ 
+        \hline
+        \rowcolor{gray!10} % Grigio molto chiaro per riga alternata
+        \color{black}\textbf{Amministratore} & 20 & 53 & 1060 \\ 
+        \hline
+        \color{black}\textbf{Analista} & 25 & 57 & 1425  \\ 
+        \hline
+        \rowcolor{gray!10} % Grigio molto chiaro per riga alternata
+        \color{black}\textbf{Progettista} & 25 & 106 & 2650  \\ 
+        \hline
+         \color{black}\textbf{Programmatore} & 15 & 180 & 2700 \\ 
+        \hline
+        \rowcolor{gray!10} % Grigio molto chiaro per riga alternata
+        \color{black}\textbf{Verificatore} & 15 & 180 & 2700 \\ 
+        \hline
+
+        % Ultima riga - Grigio molto scuro, testo bianco in grassetto
+        \rowcolor{gray!70} 
+        \color{white}\textbf{Totale} & \color{white} & \color{white}644 & \color{white}12575  \\ 
+        \hline
+    \end{tabular}
+    \caption{Tabella con il prospetto economico}
+\end{table}
