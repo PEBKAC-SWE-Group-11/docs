@@ -6,7 +6,7 @@
             \item \textbf{Committente}: Prof. Vardanega T., Prof. Cardin R.
         \end{itemize}
      \subsubsection{Obiettivo}
-    Il progetto verte sulla realizzazione di un sistema pubblicitario mirato all’utente che grazie a dati raccolti da esso (come posizione, abitudini e interessi) riesce a fornire degli annunci personalizzati. L’utilizzo di un sistema del genere vorrebbe essere impiegato su un veicolo tramite un piccolo dispositivo simulabile da una web app. Gli annunci forniti non hanno solo l'obiettivo di rispecchiare al meglio gli interessi dell’utente ma anche quello di fornire una migliore visibilita’ e targeting agli inserzionisti.
+    Il progetto verte sulla realizzazione di un sistema pubblicitario mirato all’utente che grazie a dati raccolti da esso (come posizione, abitudini e interessi) riesce a fornire degli annunci personalizzati. L’utilizzo di un sistema del genere vorrebbe essere impiegato su un veicolo tramite un piccolo dispositivo simulabile da una web app. Gli annunci forniti non hanno solo l'obiettivo di rispecchiare al meglio gli interessi dell’utente ma anche quello di fornire una migliore visibilità e targeting agli inserzionisti.
      \subsubsection{Dominio Applicativo}
     Il proponente chiede la realizzazione di una web-app che simuli un piccolo schermo e dove il suo funzionamento si basi sull’utilizzo di data stream processing grazie al raccoglimento dei dati da sensori (come GPS) e alla loro elaborazione tramite LLM. I risultati vengono poi visualizzati in una mappa con a fianco pop-up con gli annunci.
     \subsubsection{Tecnologie}
@@ -15,7 +15,7 @@
         \item Python per l'utilizzo di framework per la simulazione dei dati
         \item Utilizzo di broker per disaccoppiare lo stream di informazioni provenienti dai simulatori.
         \item Apache Airflow,Apache NiFi per lo stream processing.
-        \item LangChain,FLow per l'utilizzo di uno strumento in grado di processare i messaggi in input e fornire una risposta tramite LLM.
+        \item LangChain, FLow per l'utilizzo di uno strumento in grado di processare i messaggi in input e fornire una risposta tramite LLM.
         \item PostGIS,ClickHouse,Timescale per l'utilizzo di database o altre tipologie di storage in grado di soddisfare le esigenze specifiche di progetto. 
         \item Superset,Grafana,Tableau per l'utilizzo di uno o più strumenti per la data visualization delle informazioni.
     \end{itemize}
@@ -30,7 +30,6 @@
     \subsubsection{Punti deboli}
     
     \begin{itemize}
-        \item L’utilizzo di dati personali e di geolocalizzazione solleva questioni di privacy, regolamentazione e gestione dati, che potrebbero complicare l’implementazione a causa della necessità di conformità a normative come il GDPR.
         \item La gestione dei flussi dati in tempo reale e l’elaborazione tramite LLM richiedono elevate risorse computazionali, il che può aumentare i costi operativi, soprattutto se si considerano utenti su larga scala.
         \item La misurazione del successo degli annunci pubblicitari può risultare complessa; ottenere dati accurati sulle conversioni può richiedere ulteriori integrazioni o sistemi di tracciamento e potrebbe variare in modo significativo tra gli utenti.
     \end{itemize}
