@@ -9,12 +9,12 @@ In questa sezione viene descritto il piano che identifica i documenti da produrr
 % Creazione della tabella
 \begin{table}[H]
     \centering
-   \begin{tabularx}{\textwidth}{X|X|X|X|X}
+   \begin{tabularx}{\textwidth}{X|X|>{\hsize=1.2\hsize}X|X|>{\hsize=0.8\hsize}X}
         \textbf{Nome} & \textbf{Scopo} & \textbf{Redattore} & \textbf{Destinatari} & \textbf{Consegne} \\ \hline
         Analisi dei requisiti    & Definizione dei requisiti utente    & Analista & Azienda proponente, Docenti & RTB\textsubscript{G}, PB\textsubscript{G}    \\ \hline
         Norme di progetto    & Regolamento normativo del gruppo    & Amministratore, Responsabile &  Docenti & RTB, PB    \\ \hline
         Piano di Progetto   & Definizione temporale scadenze e progressi    & Responsabile &  Docenti & RTB, PB   \\ \hline
-        Piano di qualifica   & Definizione qualotà e testing    & Amministratore &  Docenti & RTB, PB   \\ \hline
+        Piano di qualifica   & Definizione qualità e testing    & Amministratore &  Docenti & RTB, PB   \\ \hline
          Verbali esterni   & Tracciamento riunioni esterne   & Responsabile, Amministratore &  Azienda proponente, Docenti & Candidatura, RTB, PB   \\ \hline
          Verbali interni   & Tracciamento riunioni interne   & Responsabile, Amministratore &  Docenti & Candidatura, RTB, PB  
        
@@ -29,24 +29,23 @@ In questa sezione vengono presentati gli standard e le regole (nello specifico d
 \subsubsubsection{Template}
 Per la stesura dei documenti il gruppo ha creato un template in formato Latex\textsubscript{G}. Il template fornisce una struttura e un formato predefinito per semplificare la creazione di documenti, al fine di garantire coerenza, efficienza e standardizzazione della presentazione. 
 Il template è progettato per essere facile da usare, dovendo inserire solo con piccole modifiche per rispecchiare le specificità di ciascun tipo di documento.\\
-In particolare nel template è definita la pagina di copertina con intestazione contenente logo informazioni del gruppo e dell'Università di Padova, titolo del docunto, informazioni sul documento (uso, destinatari) e un breve abstract del contenuto, oltre che altre specifiche di stile come il titolo dell'indice in italiano e il numero di pagina come \texttt{X di Tot}, dove \texttt{X} è il numero della pagina e \texttt{Tot} è il numero totale di pagine.
+In particolare nel template è definite la pagina di copertina con intestazione contenente logo informazioni del gruppo e dell'Università di Padova, titolo del documento, informazioni sul documento (uso, destinatari) e un breve abstract del contenuto, oltre che altre specifiche di stile come il titolo dell'indice in italiano e il numero di pagina come \texttt{X di Tot}, dove \texttt{X} è il numero della pagina e \texttt{Tot} è il numero totale di pagine.
 \subsubsubsubsection{Parametri}
 Nel principale file Latex del template sono definiti una serie di comandi personalizzati per l'inserimento automatico delle informazioni come titolo, data, uso, destinatari e abstract. \\
 Sono inoltre già presenti ma commentate le voci necessarie solo per i verbali (vedi  \hyperref[sec: struttura verbali]{§4.1.3.3 Verbali})
 \subsubsubsection{Struttura del documento}
-Tutti i documenti prodotti da PEBKAC presentano la medesima struttura, alla quale ogni membro di deve attenere durante la procedura di stesura e modifica.
+Tutti i documenti prodotti da PEBKAC presentano la medesima struttura, alla quale ogni membro si deve attenere durante la procedura di stesura e modifica.
 \begin{itemize}
     \item \textbf{Pagina di copertina}: come nella sezione Template precedente;
-    \item \textbf{Registro delle versioni}: questo registro è utilizzato per tenere traccia delle varie versioni per permettere di comprendere velocemente chi ha realizzato o modificato determinate sezioni della documentazione e quando.. Il registro presenta le versioni ordinate a partire dalla versione più recente;
-     \item \textbf{Indice}: questo registro è utilizzato per tenere traccia delle varie versioni per permettere di comprendere velocemente chi ha realizzato o modificato determinate sezioni della documentazione e quando.. Il registro presenta le versioni ordinate a partire dalla versione più recente;
-     \item \textbf{Indice}: presente per facilitare la consultazionedel documento, dotato di sezioni. Il suo scopo è di facilitare e agevolare l’accesso ad un determinato contenuto all'interno nel documento;
+    \item \textbf{Registro delle versioni}: questo registro è utilizzato per tenere traccia delle varie versioni per permettere di comprendere velocemente chi ha realizzato o modificato determinate sezioni della documentazione e quando. Il registro presenta le versioni ordinate a partire dalla versione più recente;
+     \item \textbf{Indice}: presente per facilitare la consultazione del documento, dotato di sezioni. Il suo scopo è di facilitare e agevolare l’accesso ad un determinato contenuto all'interno nel documento;
      \item \textbf{Contenuto}: il contenuto vero e proprio del documento.
 \end{itemize}
 
 \subsubsubsection{Verbali}\label{sec: struttura verbali}
 I verbali differiscono dalla struttura precedentemente esposta in quanto ad essi prevedono delle sezioni aggiuntive ed obbligatorie:
 \begin{itemize}
-    \item \textbf{Pagina di copertina}: nel caso di un verbale tra le informazioni sul documento compaiono anche i nominativi con i rispettivi i ruoli dei membri che hanno lavorato alla alla loro produzione;
+    \item \textbf{Pagina di copertina}: nel caso di un verbale tra le informazioni sul documento compaiono anche i nominativi con i rispettivi ruoli dei membri che hanno lavorato alla loro produzione;
     \item \textbf{informazioni generali}: la prima sezione di un verbale deve sempre essere quella nominata "Informazioni generali" che prevede, sottoforma di elenco puntato, le seguenti informazioni:
         \begin{itemize}
             \item Tipo di riunione,
@@ -85,7 +84,7 @@ La versione di un documento è del tipo [\textbf{x}].[\textbf{y}].[\textbf{z}]:
     \item \textbf{Elenchi}: elenchi puntati o numerati, ogni punto inizia con la lettera mauiscola e termina con ";" ad eccezione dell'ultimo che termina con ".";
     \item \textbf{Menzioni}: ogni menzione ad una persona, interna o esterna, avviene nel formato Nome Cognome;
     \item \textbf{Riferimenti interni}: i riferimenti a sezioni interne allo stesso documento devono essere ripostati seguendo la notazione \texttt{§1.2 Nome sezione}, dove \texttt{§1.2} è il numero della sezione. Inoltre questi riferimenti devono essere opportunamenti collegati tramite link al paragrafo indicato, senza alterare lo stile del testo;
-    \item \textbf{Riferimenti interni}: i riferimenti a sezioni di documenti esterni devono essere ripostati seguendo la notazione \texttt{Nome Documento (versione di riferimento), Nome sezione};
+    \item \textbf{Riferimenti esterni}: i riferimenti a sezioni di documenti esterni devono essere ripostati seguendo la notazione \texttt{Nome Documento (versione di riferimento), Nome sezione};
      \item \textbf{Link URL}: possono essere estesi o avere una visualizzazione abbreviata, ma sempre visualizzati di colore blu;
     \item \textbf{Caratteri maiuscoli}: devono essere utilizzati per
         \begin{itemize}
