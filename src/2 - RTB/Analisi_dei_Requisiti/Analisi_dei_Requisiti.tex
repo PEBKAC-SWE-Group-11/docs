@@ -1,0 +1,64 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{svg}
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=green]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{makecell}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{pgfplotstable}
+\usepackage[font=small]{caption}
+\newcommand\colorrow{\rowcolor{lightgray}\cellcolor{white}}
+\setcounter{secnumdepth}{4}
+
+\graphicspath{ {images/} {../shared/images/} }
+\definecolor{unipd}{HTML}{B5121B}
+\newcommand{\data}{19 novembre 2024}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+
+\setlength{\parskip}{5pt}
+
+\begin{document}
+
+\input{contents/header}
+\input{contents/title}
+\input{contents/document_info}
+\newpage
+\input{contents/versioning}
+\newpage
+\tableofcontents
+\newpage
+\input{contents/image_list}
+\newpage
+\input{contents/tables_list}
+\newpage
+\input{contents/introduction}
+\newpage
+\input{contents/description_of_product}
+\newpage
+\input{contents/use_cases/use_cases_introduction}
+\input{contents/use_cases/UC1 - XXXXXX}
+\input{contents/use_cases/UC2 - XXXXXX}
+\newpage
+\input{contents/requirements}
+\newpage
+\input{contents/requirements_tracking}
+\newpage
+
+\end{document}
