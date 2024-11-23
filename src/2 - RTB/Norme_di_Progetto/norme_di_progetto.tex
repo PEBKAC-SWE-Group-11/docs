@@ -11,6 +11,10 @@
 \usepackage{lastpage}  % Pacchetto per ottenere il numero totale delle pagine
 \usepackage{fancyhdr}  % Pacchetto per personalizzare l'intestazione e il piè di pagina
 \usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \graphicspath{ {images/} {../shared/images/} }
 \definecolor{unipd}{HTML}{B5121B}
 
