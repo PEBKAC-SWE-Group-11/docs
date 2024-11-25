@@ -10,7 +10,10 @@
 \usepackage[italian]{babel}
 \usepackage{lastpage}  % Pacchetto per ottenere il numero totale delle pagine
 \usepackage{fancyhdr}  % Pacchetto per personalizzare l'intestazione e il piè di pagina
-\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \graphicspath{ {images/} {../shared/images/} }
 \definecolor{unipd}{HTML}{B5121B}
 
@@ -22,12 +25,12 @@
 \fancyfoot[C]{\thepage{} di \pageref{LastPage}} % Imposta il piè di pagina centrale come "numero pagina di totale pagine"
 \renewcommand{\headrulewidth}{0pt} % Imposta la larghezza della linea di intestazione a 0 punti
 
-\newcommand{\data}{DD month YYYY}
-\newcommand{\titolo}{Title}
+\newcommand{\data}{GG mese AAAA}
+\newcommand{\titolo}{Titolo}
 \newcommand{\responsabile}{Responsabile}
 \newcommand{\verificatore}{Verificatore}
 \newcommand{\redattore}{Redattore}
-\newcommand{\uso}{i / e}
+\newcommand{\uso}{Interno/Esterno}
 \newcommand{\destinatari }{
    %& Vimar S.p.A.  \\
     & Tullio Vardanega  \\
@@ -45,11 +48,11 @@
 \tableofcontents
 \newpage
 % VERBALE
-%\input{contents/info}
-%\newpage
-%\input{contents/summary}
-%\newpage
-%\input{contents/todo}
+% \input{contents/info}
+% \newpage
+% \input{contents/summary}
+% \newpage
+% \input{contents/todo}
 
 %LISTA FIGURE
 %\listoffigures 
