@@ -1,11 +1,11 @@
 \section{Descrizione del Prodotto}
 \subsection{Obiettivo fissato}
-L'obiettivo principale fissato dal capitolato proposto dall'azienda Vimar è un applicativo che gli installatori possono
-interrogare per reperire informazioni testuali e grafiche sui prodotti Vimar presenti all’interno del
-sito ufficiale.
-\subsection{Caratteristiche utente}
-\subsubsection{Utenti}
-Gli utenti principali di questo prodotto software sono gli installatori che andranno a interrogare il chatbot per reperire informazioni testuali e grafiche sui prodotti Vimar presenti all'interno del sito ufficiale.
+L’obiettivo del progetto é quello di fornire al Proponente un’app in grado di fornire supporto in tempo reale agli installatori di dispositivi offerti dall’azienda allo scopo di agevolare e velocizzare la raccolta di informazioni richieste. Per rendere efficiente e veloce la raccolta di informazioni, l’azienda sceglie di basare la ricerca principalmente sull’interrogazione di LLM. La soluzione potrà essere realizzata tramite un sistema di chat dove l’utente, tramite linguaggio naturale, fa delle richieste ed ottiene delle risposte da un’intelligenza artificiale.
+
+\subsection{Funzioni del prodotto}
+Il software deve essere in grado di recuperare informazioni dal sito web di Vimar e indicizzarle in un database vettoriale\textsubscript{G} dal quale un LLM possa ricavare le informazioni per rispondere alle domande poste dagli installatori.
+Secondariamente il software deve permettere la gestione di queste chat.
+
 \subsection{Tecnologie  e analisi della struttura di progetto} 
 \subsubsection{Vincoli tecnologici}
 I vincoli tecnologici sono i seguenti:
@@ -39,10 +39,6 @@ Inoltre vengono suggerite le seguenti tecnologie da utilizzare:
     \item Nell’ambito dello sviluppo software, si consiglia l’utilizzo di GitHub Copilot (vedi GitHub Student
     Pack) o Amazon Q (versione gratuita).
 \end{itemize}
-\subsubsection{Test}
-Il prodotto software inoltre dovrà essere sottoposto ad alcuni test, in particolare:
-\begin{itemize}
-    \item Test di unità, per la verifica delle componenti back-end e front-end;
-    \item Test di integrazione, con le componenti infrastrutturali e applicative;
-    \item Test End-to-End, per validare i requisiti iniziali e provare la soluzione nella sua interezza.
-\end{itemize}
+
+\subsection{Caratteristiche utente}
+Gli utenti principali di questo prodotto software sono gli installatori, professionisti che si occupano della progettazione, messa in funzione e manutenzione di un impianto elettrico e domotico, che andranno a interrogare il chatbot per reperire informazioni testuali e grafiche sui prodotti Vimar presenti all'interno del sito ufficiale. 
