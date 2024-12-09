@@ -60,13 +60,14 @@
     \item \textbf{Precondizioni}: 
         \begin{itemize}
             \item L’installatore ha accesso all’interfaccia web del sistema;
-            \item Nel sistema non è presente alcuna conversazione;
+            \item L'installatore crea una nuova conversazione libera e poi non fa nessuna domanda.
         \end{itemize}
     \item \textbf{Postcondizioni}: Il sistema restituisce una risposta che indica il motivo per cui si è verificato l’errore;
     \item \textbf{Scenario principale}:
     \begin{enumerate}
     \item L’installatore accede all’interfaccia web di Vimar GENIALE;
-    \item Richiede il salvataggio di una o più conversazioni, nonostante non sia memorizzata alcuna conversazione;
+    \item L'installatore crea una nuova conversazione, ma non pone nessuna domanda.
+    \item Richiede il salvataggio di una o più conversazioni;
     \item Il sistema elabora la richiesta e fornisce una risposta che spiega la causa dell'errore riscontrato;
     \item L’installatore visualizza le informazioni sull’errore che si è verificato.
     \end{enumerate}
@@ -106,8 +107,9 @@
     \begin{enumerate}
     \item L’installatore accede all’interfaccia web di Vimar GENIALE;
     \item Inserisce una domanda o una parola chiave relativa ad un prodotto specifico;
-    \item Il sistema esegue la ricerca nel database dei prodotti e restituisce una risposta che include informazioni dettagliate come schemi, descrizioni e manuali;
-    \item L’installatore visualizza le informazioni fornite.
+    \item Il sistema esegue la ricerca nel database le informazioni necessarie a fornire sufficiente contesto al LLM.
+    \item LLM elabora la risposta;
+    \item L’installatore visualizza la risposta.
     \end{enumerate}
     \item \textbf{Estensioni}: 
         \begin{itemize}
@@ -288,44 +290,28 @@
     \item \textbf{Estensioni}: UC 13 - Inserimento username o password errati
     \item \textbf{Inclusioni}: 
         \begin{itemize}
-            \item UC 12.1 - Inserimento username
-            \item UC 12.2 - Inserimento password
+            \item UC 12.1 - Inserimento username e password
         \end{itemize}
 \end{itemize}
 
-\subuc{Inserimento username}{inserimento_username}
+\subuc{Inserimento username e password}{inserimento_username}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Amministratore;
-    \item \textbf{Descrizione}: Un amministratore desidera accedere al cruscotto informativo per visualizzare una panoramica di informazioni relative all’utilizzo del sistema, dunque inserisce lo username, la prima delle credenziali richieste;
+    \item \textbf{Descrizione}: Un amministratore desidera accedere al cruscotto informativo per visualizzare una panoramica di informazioni relative all’utilizzo del sistema, dunque inserisce lo username e la password;
     \item \textbf{Precondizioni}: 
         \begin{itemize}
             \item L’amministratore ha accesso all’interfaccia web del sistema;
-            \item L’amministratore è dotato dello username necessario ad accedere alla dashboard.
+            \item L’amministratore è dotato dello username e della password necessarie ad accedere alla dashboard.
         \end{itemize}
-    \item \textbf{Postcondizioni}: L’amministratore ha inserito lo username, la prima delle credenziali richieste per l’accesso al cruscotto informativo;
+    \item \textbf{Postcondizioni}: L’amministratore ha inserito lo username e la password, ovvero le credenziali richieste per l’accesso al cruscotto informativo;
     \item \textbf{Scenario principale}:
     \begin{enumerate}
     \item L’amministratore accede all’interfaccia web di Vimar GENIALE;
     \item Inserisce lo username.
-    \end{enumerate}
-\end{itemize}
-
-\subuc{Inserimento password}{inserimento_password}
-\begin{itemize}
-    \item \textbf{Attori coinvolti}: Amministratore;
-    \item \textbf{Descrizione}: Un amministratore desidera accedere al cruscotto informativo per visualizzare una panoramica di informazioni relative all’utilizzo del sistema, dunque inserisce la password, la seconda delle credenziali richieste;
-    \item \textbf{Precondizioni}: 
-        \begin{itemize}
-            \item L’amministratore ha accesso all’interfaccia web del sistema;
-            \item L’amministratore è dotato della password necessaria ad accedere alla dashboard.
-        \end{itemize}
-    \item \textbf{Postcondizioni}: L’amministratore ha inserito la password, la seconda delle credenziali richieste per l’accesso al cruscotto informativo;
-    \item \textbf{Scenario principale}:
-    \begin{enumerate}
-    \item L’amministratore accede all’interfaccia web di Vimar GENIALE;
     \item Inserisce la password.
     \end{enumerate}
 \end{itemize}
+
 
 \uc{Inserimento username o password errati}{inserimento_cred_errati}
 \begin{itemize}
