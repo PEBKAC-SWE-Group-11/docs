@@ -434,7 +434,7 @@
     \item \textbf{Inclusioni}: UC 12 - Accesso al cruscotto informativo
 \end{itemize}
 
-\subuc{Visualizzazione numero richieste con conversazione libera sulla dashboard}{visualizzazione_richieste_libere}
+\subuc{Visualizzazione numero richieste con conversazione libera}{visualizzazione_richieste_libere}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Amministratore;
     \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo il numero delle richieste effettuate con una conversazione libera;
@@ -456,7 +456,7 @@
     \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
 \end{itemize}
 
-\subuc{Visualizzazione numero richieste con conversazione guidata sulla dashboard}{visualizzazione_richieste_guidate}
+\subuc{Visualizzazione numero richieste con conversazione guidata}{visualizzazione_richieste_guidate}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Amministratore;
     \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo il numero delle richieste effettuate con una conversazione guidata;
@@ -478,7 +478,7 @@
     \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
 \end{itemize}
 
-\subuc{Visualizzazione statistiche sul numero di parole usati nelle richieste sulla dashboard}{visualizzazione_statistiche_parole}
+\subuc{Visualizzazione statistiche sul numero di parole usate nelle richieste}{visualizzazione_statistiche_parole}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Amministratore;
     \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo le statistiche sul numero di parole utilizzate;
@@ -500,51 +500,7 @@
     \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
 \end{itemize}
 
-\subuc{Visualizzazione statistiche sulle parole più usate nelle richieste sulla dashboard}{visualizzazione_statistiche_parole_usate}
-\begin{itemize}
-    \item \textbf{Attori coinvolti}: Amministratore;
-    \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo le statistiche sulle parole più usate nelle richieste;
-    \item \textbf{Precondizioni}: 
-        \begin{itemize}
-            \item L’amministratore ha accesso all’interfaccia web del sistema;
-            \item L’amministratore è dotato dell’accesso alla dashboard;
-        \end{itemize}
-    \item \textbf{Postcondizioni}: Il sistema raccoglie le informazioni relative alle statistiche sulle parole più usate nelle richieste e le mostra nella dashboard;
-    \item \textbf{Scenario principale}:
-    \begin{enumerate}
-    \item L’amministratore accede all’interfaccia web di Vimar GENIALE;
-    \item Inserisce le proprie credenziali;
-    \item Il sistema riceve la richiesta di accesso e verifica le credenziali;
-    \item L’amministratore ottiene l’accesso alla dashboard;
-    \item Il sistema mostra le informazioni richieste sul cruscotto informativo.
-    \end{enumerate}
-    \item \textbf{Inclusioni}: UC 12 - Accesso al cruscotto informativo
-    \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
-\end{itemize}
-
-\subuc{Visualizzazione grafico dell’andamento giornaliero dell’utilizzo dell’applicativo sulla dashboard}{visualizzazione_grafico_andamento}
-\begin{itemize}
-    \item \textbf{Attori coinvolti}: Amministratore;
-    \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo il grafico dell’andamento giornaliero dell’utilizzo dell’applicativo;
-    \item \textbf{Precondizioni}: 
-        \begin{itemize}
-            \item L’amministratore ha accesso all’interfaccia web del sistema;
-            \item L’amministratore è dotato dell’accesso alla dashboard;
-        \end{itemize}
-    \item \textbf{Postcondizioni}: Il sistema raccoglie le informazioni, crea il grafico dell’andamento giornaliero dell’utilizzo dell’applicativo e lo mostra nella dashboard;
-    \item \textbf{Scenario principale}:
-    \begin{enumerate}
-    \item L’amministratore accede all’interfaccia web di Vimar GENIALE;
-    \item Inserisce le proprie credenziali;
-    \item Il sistema riceve la richiesta di accesso e verifica le credenziali;
-    \item L’amministratore ottiene l’accesso alla dashboard;
-    \item Il sistema mostra le informazioni richieste sul cruscotto informativo.
-    \end{enumerate}
-    \item \textbf{Inclusioni}: UC 12 - Accesso al cruscotto informativo
-    \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
-\end{itemize}
-
-\subuc{Visualizzazione numero risposte positive dal sistema di feedback sulla dashboard}{visualizzazione_risposte_positive}
+\subuc{Visualizzazione numero risposte positive dal sistema di feedback}{visualizzazione_risposte_positive}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Amministratore;
     \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo il numero delle risposte positive dal sistema di feedback;
@@ -566,7 +522,7 @@
     \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
 \end{itemize}
 
-\subuc{Visualizzazione numero risposte negative dal sistema di feedback sulla dashboard}{visualizzazione_risposte_negative}
+\subuc{Visualizzazione numero risposte negative dal sistema di feedback}{visualizzazione_risposte_negative}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Amministratore;
     \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo il numero delle risposte negative dal sistema di feedback;
@@ -619,5 +575,61 @@
 \centering
 \includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC15.png}
 \caption{UC15 - Richiesta di argomento proibito}
+% \label{fig:UC1a}
+\end{figure}
+
+\uc{Domanda al sisitema}{domanda}
+\begin{itemize}
+    \item \textbf{Attori coinvolti}: Installatore;
+    \item \textbf{Descrizione}: L’installatore inserisce una domanda;
+    \item \textbf{Precondizioni}: 
+        \begin{itemize}
+            \item L’installatore ha accesso all’interfaccia web del sistema;
+            \item L’installatore ha accesso ad una conversazione memorizzabile nel sistema;
+            \item L'installatore ha inviato una domanda al sistema;
+            \item La domanda posta non riguarda argomenti proibiti.
+        \end{itemize}
+    \item \textbf{Postcondizioni}: Il sistema restituisce una risposta;
+    \item \textbf{Scenario principale}:
+    \begin{enumerate}
+    \item L’installatore accede all’interfaccia web di Vimar GENIALE;
+    \item Inserisce una domanda che ha a che vedere con prodotti VIMAR e non con argomenti proibiti o sconosciuti;
+    \item Il sistema elabora la richiesta e fornisce una risposta;
+    \item L’installatore visualizza le informazioni restituite;
+    \end{enumerate}
+    \item \textbf{Estensioni}: UC 17 - Richiesta di uno schema o immagine.
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{Analisi_dei_Requisiti/contents/casi_duso/png/UC16_activity.png}
+\caption{UC16 - Domanda al sisitema}
+% \label{fig:UC1a}
+\end{figure}
+
+\uc{Richiesta di uno schema o immagine}{domanda_immagine}
+\begin{itemize}
+    \item \textbf{Attori coinvolti}: Installatore;
+    \item \textbf{Descrizione}: L’installatore inserisce una domanda la cui risposta prevede uno schema elettrico o un'immagine;
+    \item \textbf{Precondizioni}: 
+        \begin{itemize}
+            \item L’installatore ha accesso all’interfaccia web del sistema;
+            \item L’installatore ha accesso ad una conversazione memorizzabile nel sistema;
+            \item L'installatore ha inviato una domanda al sistema;
+            \item La risposta alla domanda posta necessita, per essere completa, si uno schema elettrico o di un'immagine.
+        \end{itemize}
+    \item \textbf{Postcondizioni}: Il sistema restituisce una risposta con l'immagine o lo schema corretto;
+    \item \textbf{Scenario principale}:
+    \begin{enumerate}
+    \item L’installatore accede all’interfaccia web di Vimar GENIALE;
+    \item Inserisce una domanda che ha a che vedere con prodotti VIMAR;
+    \item Il sistema elabora la richiesta e fornisce una risposta inserendo uno schema o di un'immagine di cui la risposta ha bisogno per essere esaustiva;
+    \item L’installatore visualizza le informazioni restituite;
+    \item \textbf{Inclusioni}: UC 16 - Domanda al sistema.
+    \end{enumerate}
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{Analisi_dei_Requisiti/contents/casi_duso/png/UC17.png}
+\caption{UC17 - Richiesta di uno schema o immagine}
 % \label{fig:UC1a}
 \end{figure}
