@@ -1,0 +1,73 @@
+\section{Qualità di processo}
+La qualità di processo si basa sull’idea che, per realizzare un prodotto conforme a specifici standard qualitativi, è essenziale monitorare e migliorare regolarmente i processi che lo generano. Questo principio si applica all’intera gamma di attività, pratiche e metodologie impiegate durante il ciclo di vita del software.
+In altre parole, la qualità dei processi ha l'obiettivo di andare a conformare la qualità del prodotto in modo tale da garantire sempre che gli standard definidi nel documento \textit{Norme di Progetto} vengano rispettati ed eventualmente migliorati. Di seguito sono elencate le metriche che il team si impegna a rispettare per garantire l’eccellenza nei processi. La sigla \textit{MPC} sta ad indicare le metriche di processo.
+\subsection{Processi primari}
+\subsubsection{Fornitura}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{>{\hsize=0.7\hsize}X|X|>{\centering\arraybackslash}X|>{\hsize=0.8\hsize}>{\centering\arraybackslash}X}
+        \textbf{Metrica} & \textbf{Descrizione} & \textbf{Valore Accettabile} & \textbf{Valore Ideale} \\ \hline
+        
+         MPC - CV& Cost variance& \(\ge -7.5\%\) & \(\ge 0\%\) \\ \hline
+         MPC - PV& Planned Value& \(\ge 0\) & \(\le BAC\) \\ \hline
+         MPC - EV& Earned Value& \(\ge 0\) & \(\le EAC\) \\ \hline
+         MPC - AC& Actual Cost& \(\ge 0\)  & \(\le EAC\) \\ \hline
+         MPC - CPI& Cost Performance Index & tra 0.95 e 1.05& 1 \\ \hline
+         MPC - EAC& Estimated At Completion & deviazione del 5\% del BAC & BAC \\ \hline 
+         MPC - VAC& Variance At Completion & deviazione del 10\% del BAC & 0\% \\ \hline
+         MPC - ETC& Estimated To Completion & \(\ge 0\) & \(\le EAC\) \\ \hline
+         MPC - SV& Schedule Variance & deviazione del 10\% del BAC & 0\% \\ \hline
+         MPC - BV& Budget Variance & deviazione del 10\% del BAC & 0\% \\ 
+         
+    \end{tabularx}
+    \caption{Documenti del ciclo di vita del prodotto SW}
+\end{table}
+
+\subsubsection{Sviluppo}
+\subsubsubsection{Codifica}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{>{\hsize=0.7\hsize}X|X|>{\centering\arraybackslash}X|>{\hsize=0.8\hsize}>{\centering\arraybackslash}X}
+   
+        \textbf{Metrica} & \textbf{Descrizione} & \textbf{Valore accettabile} & \textbf{Valore ideale}  \\
+        \hline
+        MPC-SC & Statement Coverage &  0 & \(\ge 100\%\) \\
+        
+    \end{tabularx}
+    \caption{Tabella riguardante le metriche per il processo di codifica}
+\end{table}
+
+\subsection{Processi di supporto}
+\subsubsubsection{Documentazione}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{>{\hsize=0.7\hsize}X|X|>{\centering\arraybackslash}X|>{\hsize=0.8\hsize}>{\centering\arraybackslash}X}
+   
+        \textbf{Metrica} & \textbf{Descrizione} & \textbf{Valore accettabile} & \textbf{Valore ideale}  \\
+        \hline
+        MPC-IG & Indice Gulpease & \(\ge65\%\) & 100 \\
+        \hline
+        MPC-CO & Correttezza Ortografica & 0 & 0 \\
+
+        
+    \end{tabularx}
+    \caption{Tabella riguardante le metriche per il processo di documentazione}
+\end{table}
+
+\subsubsubsection{Gestione della qualità}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{>{\hsize=0.7\hsize}X|X|>{\centering\arraybackslash}X|>{\hsize=0.8\hsize}>{\centering\arraybackslash}X}
+   
+        \textbf{Metrica} & \textbf{Descrizione} & \textbf{Valore accettabile} & \textbf{Valore ideale}  \\
+        \hline
+        MPC-MNS & Metriche Non Soddisfatte & \(\le3\) & 0\\
+        
+    \end{tabularx}
+    \caption{Tabella riguardante le metriche per il processo di gestione delle qualità}
+\end{table}
+
