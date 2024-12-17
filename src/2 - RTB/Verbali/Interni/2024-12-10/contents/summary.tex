@@ -4,7 +4,7 @@
     \begin{itemize}
     \item \textbf{Responsabile}: Alessandro Benin 
     \item \textbf{Amministratore}: Matteo Gerardin 
-    \item \textbf{Verificatore}: Tommaso Zocche, Davide Martinelli
+    \item \textbf{Verificatori}: Tommaso Zocche, Davide Martinelli
     \item \textbf{Analista}: Ion Bourosu
     \item \textbf{Programmatore}: Matteo Piron
     \item \textbf{Progettista}: Derek Gusatto
@@ -12,9 +12,8 @@
     \item Vengono consolidate alcune scelte a livello di tecnologie, nello specifico:
     \begin{enumerate}
         \item \textbf{Backend in Python}: come consigliato da Vimar S.p.A. il backend sarà programmato in Python, linguaggio semplice e veloce, molto aggiornato per i modelli di LLM, anche in ambito RAG ed embedding;
-        \item \textbf{Database in PostgreSQL}: come suggerito da Vimar S.p.A. e dopo alcune prove si sceglie di usare PostgreSQL come DBSM grazie alla sua capacità e velocita in ambito di DB vettoriali (con l'estenzione vector).
+        \item \textbf{Database in PostgreSQL}: come suggerito da Vimar S.p.A. e dopo alcune prove si sceglie di usare PostgreSQL come DBSM grazie alla sua capacità e velocita in ambito di DB vettoriali (con l'estensione vector).
         \item \textbf{Modelli LLM}: in attesa di poter testare i modelli nel contesto adatto al fine di poterli valutare al meglio per il progetto, vengono esclusi Bert (limitato nel numero di token di contesto) e Phi (limitato alla lingua inglese) e rimangono in sospeso per la valutazione Llama3.1 e Mistral e openGPT-X;
-        \item \textbf{Frontend in Flask}: come suggerito dal capitolato dell'azienda Vimar S.p.A. verrà utilizzato Flask in quanto è ideale per il frontend grazie alla sua integrazione diretta con il backend, semplificando configurazione e utilizzo rispetto a sistemi API REST complessi. Non richiede lo sviluppo di interfacce elaborate come Angular, l'altra tecnologia consigliata dal capitolato, mentre HTML, CSS e JavaScript garantiscono l'interattività senza ricorrere a framework pesanti.
-        \item \textbf{Scrapy}: come consigliato da Vimar S.p.A. per il componente di estrazione e reperimento di informazioni dal sito web verrà utilizzato Scrapy in quanto molto efficiente e facilmente adattabile a modelli di embedding.
+        \item \textbf{Scrapy}: come consigliato da Vimar S.p.A. per il componente di estrazione e reperimento di informazioni dal sito web verrà utilizzato Scrapy in quanto molto efficiente.
     \end{enumerate}   
 \end{itemize}
