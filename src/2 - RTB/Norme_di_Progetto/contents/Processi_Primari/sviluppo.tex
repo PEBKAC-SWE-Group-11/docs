@@ -11,15 +11,15 @@ Il processo è suddiviso nelle seguenti attività:
 \end{itemize}
 
 \subsubsection{Analisi dei Requisiti}
-\subsubsection{Scopo}
-Lo scopo dell'analisi dei requisiti è conprendere e definire in modo chiaro e completo le necessità e le aspettative del Proponente e degli utenti relativamente al prodotto software.
-\subsubsection{Implementazione}
-L'analidi dei requisiti, raccolta nel documento Analisi dei Requisiti V1.0.0, viene svolta secondo le seguenti fasi:
+\subsubsubsection{Scopo}
+Lo scopo dell'analisi dei requisiti è comprendere e definire in modo chiaro e completo le necessità e le aspettative del Proponente e degli utenti relativamente al prodotto software.
+\subsubsubsection{Implementazione}
+L'analisi dei requisiti, raccolta nel documento Analisi dei Requisiti V1.0.0, viene svolta secondo le seguenti fasi:
 \begin{enumerate}
     \item Studio del capitolato e delle esigenze del Proponente;
     \item Individuazione dei casi d'uso e dei requisiti;
     \item Confronto con il Proponente su quanto prodotto;
-    \item Divisione dei requisiti nelle cateogire individuate e applicazione dei quanto emerso nella discussione col Proponente.
+    \item Divisione dei requisiti nelle categorie individuate e applicazione dei quanto emerso nella discussione col Proponente.
 \end{enumerate}
 
 L'attività di analisi può essere svolta in modo incrementale, quindi le sue fasi possono essere svolte più volte durante lo sviluppo del progetto. 
@@ -32,18 +32,18 @@ L'Analisi dei Requisiti V1.0.0 contiene:
     \item \textbf{Casi d'uso}: individua le possibili interazioni tra gli attori e il sistema\textsubscript{G};
     \item \textbf{Requisiti}: elenca le caratteristiche da soddisfare;
 \end{itemize}
-\subsubsection{Casi d'uso}
+\subsubsubsection{Casi d'uso}
 I casi d’uso sono strutturati nel seguente modo:
 \begin{itemize}
     \item \textbf{Attore}\textsubscript{G}: l’attore\textsubscript{G} che intende compiere lo scopo rappresentato dal caso d’uso;
     \item \textbf{Precondizioni}: stato in cui il sistema\textsubscript{G} si deve trovare prima dell’avvio della funzionalità rappresentata dal caso d’uso;
-    \item \textbf{Postcondizioni}: stato in cui il sistema\textsubscript{G} si trovarà dopo l'utente avrà terminato lo scopo rappresentato dal caso d’uso;
+    \item \textbf{Postcondizioni}: stato in cui il sistema\textsubscript{G} si troverà dopo che l'utente avrà terminato lo scopo rappresentato dal caso d’uso;
     \item \textbf{Scenario principale}: descrizione della funzionalità rappresentata dal caso d’uso;
     \item \textbf{Scenari secondari} (se necessario);
     \item \textbf{Estensioni} (se presenti);
     \item \textbf{Specializzazioni} (se presenti).
 \end{itemize}
-\subsubsubsection{Notazione}
+\subsubsubsubsection{Notazione}
 i casi d'uso seguono la seguente notazione: \textbf{UC[Codice] - [Titolo]} in cui:
 \begin{itemize}
     \item \textbf{UC} sta per Use Case\textsubscript{G};
@@ -51,7 +51,7 @@ i casi d'uso seguono la seguente notazione: \textbf{UC[Codice] - [Titolo]} in cu
     \item \textbf{[Titolo]} è il titolo del caso d'uso.
 \end{itemize}
 
-\subsubsubsection{Diagrammi UML\textsubscript{G}}
+\subsubsubsubsection{Diagrammi UML\textsubscript{G}}
 Un diagramma dei casi d’uso è uno strumento di modellazione che rappresenta visivamente le funzionalità di un sistema e le modalità con cui gli utenti interagiscono con esso. È particolarmente utile nella progettazione di sistemi poiché offre una rappresentazione intuitiva delle dinamiche operative e delle interazioni tra attori e sistema, senza entrare nei dettagli implementativi.
 I componenti principali di un diagramma dei casi d'uso sono: 
 \begin{enumerate}
@@ -65,8 +65,8 @@ Nei diagrammi in questione poi possono comparire delle relazioni:
     \item \textbf{Estensioni}: rappresentano relazioni condizionali in cui un caso d’uso aggiuntivo viene eseguito solo in circostanze particolari, interrompendo temporaneamente il flusso principale. La relazione è raffigurata con una freccia tratteggiata e l’etichetta “extend”.
 \end{enumerate}
 
-\subsubsection{Requisiti}
-\subsubsubsection{Notazione}
+\subsubsubsection{Requisiti}
+\subsubsubsubsection{Notazione}
 Ogni requisito analizzato  sarà identificato univocamente da una signa del tipo \\ \textbf{R[Tipo].[Importanza].[Codice]} nella quale:
 \begin{itemize}
     \item \textbf{[R]} sta per Requisito\textsubscript{G};
@@ -82,10 +82,10 @@ Ogni requisito analizzato  sarà identificato univocamente da una signa del tipo
         \item \textbf{D} per Desiderabile;
         \item \textbf{P} per Opzionale.
     \end{itemize}
-    \item \textbf{[Codice]} identifica univocamente i requisiti per ogni tipologia. È un numero intero progressivo univoco assegnato in ordine di importanza se il requisito non ha padre, se invece si tratta di un sotto-requisito segue il formato \textbf{[Codice\_padre].[Numero\_figlio]} e trattandosi di una struttura ricordiva non c'è limite alla profondità della gerarchia.
+    \item \textbf{[Codice]} identifica univocamente i requisiti per ogni tipologia. È un numero intero progressivo univoco assegnato in ordine di importanza se il requisito non ha padre, se invece si tratta di un sotto-requisito segue il formato \textbf{[Codice\_padre].[Numero\_figlio]} e trattandosi di una struttura ricorsiva non c'è limite alla profondità della gerarchia.
 \end{itemize}
 
-\subsubsubsection{Suddivisione}
+\subsubsubsubsection{Suddivisione}
 \begin{enumerate}
     \item \textbf{Requisiti Funzionali}: descrivono le funzionalità del sistema\textsubscript{G}, le azioni che il sistema può compiere e le informazioni che il sistema può fornire. Seguendo la notazione sopra riportata, si possono partizionare in:
     \begin{itemize}
