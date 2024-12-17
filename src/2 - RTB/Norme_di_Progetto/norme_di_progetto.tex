@@ -1,7 +1,7 @@
-
 \documentclass[12pt, a4paper]{article}
 
 \usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage{xcolor}
 \usepackage{float}
 \usepackage{svg}
@@ -11,6 +11,10 @@
 \usepackage{lastpage}  % Pacchetto per ottenere il numero totale delle pagine
 \usepackage{fancyhdr}  % Pacchetto per personalizzare l'intestazione e il piè di pagina
 \usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \graphicspath{ {images/} {../shared/images/} }
 \definecolor{unipd}{HTML}{B5121B}
 
@@ -37,8 +41,9 @@
 \newcommand{\uso}{Interno}
 \newcommand{\destinatari }{
    %& Vimar S.p.A.  \\
-    & Tullio Vardanega  \\
-    & Riccardo Cardin  }
+    & Tullio Vardanega \\
+    & Riccardo Cardin \\
+    & Gruppo PEBKAC }
 \newcommand{\abstractcontent}{ ... }
 
 \begin{document}
@@ -55,7 +60,7 @@
 \newpage
 \listoftables
 \newpage
-\input{Norme_di_Progetto/contents/intro}
+\input{contents/intro}
 \newpage
 \input{contents/standard12207.tex}
 \newpage
@@ -64,5 +69,7 @@
 \input{contents/Processi_di_Supporto/supporto.tex}
 \newpage
 \input{contents/Processi_Organizzativi/organizzativi.tex}
+\newpage
+\input{contents/Metriche_di_Qualità_del_Processo/processi_primari}
 
 \end{document}
