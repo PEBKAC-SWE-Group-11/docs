@@ -1,3 +1,4 @@
+
 \uc{Creazione conversazione libera}{conv_libera}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Installatore;
@@ -7,12 +8,18 @@
     \item \textbf{Scenario principale}:
     \begin{enumerate}
     \item L’installatore accede all’interfaccia web di Vimar GENIALE;
-    \item Richiede la creazione di una nuova conversazione;
-    \item Il sistema esegue la creazione della nuova conversazione;
-    \item L’installatore accede alla nuova conversazione.
+    \item Richiede la creazione di una nuova conversazione in modalità libera;
+    \item Il sistema esegue la creazione della nuova conversazione nella modalità desiderata dall’utente;
+    \item  L’installatore accede alla nuova conversazione.
     \end{enumerate}
     \item \textbf{Estensioni}: UC 2 - Raggiungimento limite di conversazioni;
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC1.png}
+\caption{UC1 - Creazione conversazione libera}
+% \label{fig:UC1a}
+\end{figure}
 
 \uc{Raggiungimento limite di conversazioni}{limite_conv}
 \begin{itemize}
@@ -32,6 +39,12 @@
     \item L’installatore visualizza le informazioni sull’errore che si è verificato.
     \end{enumerate}
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC2.png}
+\caption{UC2 - Raggiungimento limite di conversazioni}
+\end{figure}
+
 
 \uc{Salvataggio conversazione}{salvataggio_conv}
 \begin{itemize}
@@ -52,6 +65,12 @@
     \end{enumerate}
     \item \textbf{Estensioni}: UC 4 - Assenza di conversazioni durante il salvataggio
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC3.png}
+\caption{UC3 - Salvataggio conversazione}
+% \label{fig:UC1a}
+\end{figure}
 
 \uc{Assenza di conversazioni durante il salvataggio}{assenza_conv}
 \begin{itemize}
@@ -60,17 +79,25 @@
     \item \textbf{Precondizioni}: 
         \begin{itemize}
             \item L’installatore ha accesso all’interfaccia web del sistema;
-            \item Nel sistema non è presente alcuna conversazione;
+            \item L'installatore crea una nuova conversazione libera e poi non fa nessuna domanda.
         \end{itemize}
     \item \textbf{Postcondizioni}: Il sistema restituisce una risposta che indica il motivo per cui si è verificato l’errore;
     \item \textbf{Scenario principale}:
     \begin{enumerate}
     \item L’installatore accede all’interfaccia web di Vimar GENIALE;
-    \item Richiede il salvataggio di una o più conversazioni, nonostante non sia memorizzata alcuna conversazione;
+    \item L'installatore crea una nuova conversazione, ma non pone nessuna domanda.
+    \item Richiede il salvataggio di una o più conversazioni;
     \item Il sistema elabora la richiesta e fornisce una risposta che spiega la causa dell'errore riscontrato;
     \item L’installatore visualizza le informazioni sull’errore che si è verificato.
     \end{enumerate}
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC4.png}
+\caption{UC4 - Assenza di conversazioni durante il salvataggio}
+% \label{fig:UC1a}
+\end{figure}
+
 
 \uc{Cancellazione conversazione}{cancellazione_conv}
 \begin{itemize}
@@ -90,6 +117,13 @@
     \item L’installatore visualizza il messaggio di conferma dell’avvenuta cancellazione.
     \end{enumerate}
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC5.png}
+\caption{UC5 - Cancellazione conversazione}
+% \label{fig:UC1a}
+\end{figure}
+
 
 \uc{Ricerca informazioni sui prodotti con conversazione libera}{ricerca_info_prodotti}
 \begin{itemize}
@@ -106,8 +140,9 @@
     \begin{enumerate}
     \item L’installatore accede all’interfaccia web di Vimar GENIALE;
     \item Inserisce una domanda o una parola chiave relativa ad un prodotto specifico;
-    \item Il sistema esegue la ricerca nel database dei prodotti e restituisce una risposta che include informazioni dettagliate come schemi, descrizioni e manuali;
-    \item L’installatore visualizza le informazioni fornite.
+    \item Il sistema esegue la ricerca nel database le informazioni necessarie a fornire sufficiente contesto al LLM.
+    \item LLM elabora la risposta;
+    \item L’installatore visualizza la risposta.
     \end{enumerate}
     \item \textbf{Estensioni}: 
         \begin{itemize}
@@ -115,6 +150,12 @@
             \item UC 8 - Assenza di informazioni sul prodotto ricercato
         \end{itemize}
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC6.png}
+\caption{UC6 - Ricerca informazioni sui prodotti con conversazione libera}
+\end{figure}
+
 
 \uc{Superamento limite caratteri del messaggio}{superamento_limite_caratteri}
 \begin{itemize}
@@ -135,6 +176,13 @@
     \item L’installatore visualizza le informazioni sull’errore che si è verificato.
     \end{enumerate}
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC7.png}
+\caption{UC7 - Superamento limite caratteri del messaggio}
+% \label{fig:UC1a}
+\end{figure}
+
 
 \uc{Assenza di informazioni sul prodotto ricercato}{assenza_info_prodotto}
 \begin{itemize}
@@ -144,6 +192,7 @@
         \begin{itemize}
             \item L’installatore ha accesso all’interfaccia web del sistema;
             \item L’installatore ha accesso ad una conversazione memorizzabile nel sistema;
+            \item L’installatore pone una domanda al sistema;
             \item Il sistema non è in possesso di alcuna informazione relativa al prodotto ricercato.
         \end{itemize}
     \item \textbf{Postcondizioni}: Il sistema restituisce una risposta che indica il motivo per cui si è verificato l’errore;
@@ -155,6 +204,12 @@
     \item L’installatore visualizza le informazioni sull’errore che si è verificato.
     \end{enumerate}
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC8.png}
+\caption{UC8 - Assenza di informazioni sul prodotto ricercato}
+\end{figure}
+
 
 \uc{Visualizzazione storico dei messaggi}{visualizzazione_storico_messaggi}
 \begin{itemize}
@@ -179,6 +234,12 @@
             \item UC 10 - Mancanza messaggi pregressi nella conversazione
         \end{itemize}
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC9.png}
+\caption{UC9 - Visualizzazione storico dei messaggi}
+% \label{fig:UC1a}
+\end{figure}
 
 \uc{Mancanza messaggi pregressi nella conversazione}{mancanza_messaggi_pregressi}
 \begin{itemize}
@@ -199,6 +260,13 @@
     \item L’installatore visualizza il messaggio che indica l’assenza di messaggi pregressi.
     \end{enumerate}
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC10.png}
+\caption{UC10 - Mancanza messaggi pregressi nella conversazione}
+% \label{fig:UC1a}
+\end{figure}
+
 
 \uc{Fornitura di feedback sulla risposta del sistema ad interrogazione}{fornitura_feedback}
 \begin{itemize}
@@ -267,6 +335,12 @@
     \item Il sistema registra il feedback ricevuto dall’installatore.
     \end{enumerate}
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC11.png}
+\caption{UC11 - Fornitura di feedback sulla risposta del sistema ad interrogazione}
+% \label{fig:UC1a}
+\end{figure}
 
 \uc{Accesso al cruscotto informativo}{accesso_cruscotto}
 \begin{itemize}
@@ -288,44 +362,29 @@
     \item \textbf{Estensioni}: UC 13 - Inserimento username o password errati
     \item \textbf{Inclusioni}: 
         \begin{itemize}
-            \item UC 12.1 - Inserimento username
-            \item UC 12.2 - Inserimento password
+            \item UC 12.1 - Inserimento username e password
         \end{itemize}
 \end{itemize}
 
-\subuc{Inserimento username}{inserimento_username}
+
+\subuc{Inserimento username e password}{inserimento_username}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Amministratore;
-    \item \textbf{Descrizione}: Un amministratore desidera accedere al cruscotto informativo per visualizzare una panoramica di informazioni relative all’utilizzo del sistema, dunque inserisce lo username, la prima delle credenziali richieste;
+    \item \textbf{Descrizione}: Un amministratore desidera accedere al cruscotto informativo per visualizzare una panoramica di informazioni relative all’utilizzo del sistema, dunque inserisce lo username e la password;
     \item \textbf{Precondizioni}: 
         \begin{itemize}
             \item L’amministratore ha accesso all’interfaccia web del sistema;
-            \item L’amministratore è dotato dello username necessario ad accedere alla dashboard.
+            \item L’amministratore è dotato dello username e della password necessarie ad accedere alla dashboard.
         \end{itemize}
-    \item \textbf{Postcondizioni}: L’amministratore ha inserito lo username, la prima delle credenziali richieste per l’accesso al cruscotto informativo;
+    \item \textbf{Postcondizioni}: L’amministratore ha inserito lo username e la password, ovvero le credenziali richieste per l’accesso al cruscotto informativo;
     \item \textbf{Scenario principale}:
     \begin{enumerate}
     \item L’amministratore accede all’interfaccia web di Vimar GENIALE;
     \item Inserisce lo username.
-    \end{enumerate}
-\end{itemize}
-
-\subuc{Inserimento password}{inserimento_password}
-\begin{itemize}
-    \item \textbf{Attori coinvolti}: Amministratore;
-    \item \textbf{Descrizione}: Un amministratore desidera accedere al cruscotto informativo per visualizzare una panoramica di informazioni relative all’utilizzo del sistema, dunque inserisce la password, la seconda delle credenziali richieste;
-    \item \textbf{Precondizioni}: 
-        \begin{itemize}
-            \item L’amministratore ha accesso all’interfaccia web del sistema;
-            \item L’amministratore è dotato della password necessaria ad accedere alla dashboard.
-        \end{itemize}
-    \item \textbf{Postcondizioni}: L’amministratore ha inserito la password, la seconda delle credenziali richieste per l’accesso al cruscotto informativo;
-    \item \textbf{Scenario principale}:
-    \begin{enumerate}
-    \item L’amministratore accede all’interfaccia web di Vimar GENIALE;
     \item Inserisce la password.
     \end{enumerate}
 \end{itemize}
+
 
 \uc{Inserimento username o password errati}{inserimento_cred_errati}
 \begin{itemize}
@@ -346,6 +405,13 @@
     \item L’amministratore visualizza le informazioni sull’errore che si è verificato.
     \end{enumerate}
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC12.png}
+\caption{UC12, UC12.1 UC13 - Accesso al cruscotto informativo }
+% \label{fig:UC1a}
+\end{figure}
 
 \uc{Visualizzazione informazioni sulla dashboard}{visualizzazione_info_dashboard}
 \begin{itemize}
@@ -368,7 +434,7 @@
     \item \textbf{Inclusioni}: UC 12 - Accesso al cruscotto informativo
 \end{itemize}
 
-\subuc{Visualizzazione numero richieste con conversazione libera sulla dashboard}{visualizzazione_richieste_libere}
+\subuc{Visualizzazione numero richieste con conversazione libera}{visualizzazione_richieste_libere}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Amministratore;
     \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo il numero delle richieste effettuate con una conversazione libera;
@@ -390,7 +456,7 @@
     \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
 \end{itemize}
 
-\subuc{Visualizzazione numero richieste con conversazione guidata sulla dashboard}{visualizzazione_richieste_guidate}
+\subuc{Visualizzazione numero richieste con conversazione guidata}{visualizzazione_richieste_guidate}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Amministratore;
     \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo il numero delle richieste effettuate con una conversazione guidata;
@@ -412,7 +478,7 @@
     \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
 \end{itemize}
 
-\subuc{Visualizzazione statistiche sul numero di parole usati nelle richieste sulla dashboard}{visualizzazione_statistiche_parole}
+\subuc{Visualizzazione statistiche sul numero di parole usate nelle richieste}{visualizzazione_statistiche_parole}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Amministratore;
     \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo le statistiche sul numero di parole utilizzate;
@@ -434,51 +500,7 @@
     \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
 \end{itemize}
 
-\subuc{Visualizzazione statistiche sulle parole più usate nelle richieste sulla dashboard}{visualizzazione_statistiche_parole_usate}
-\begin{itemize}
-    \item \textbf{Attori coinvolti}: Amministratore;
-    \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo le statistiche sulle parole più usate nelle richieste;
-    \item \textbf{Precondizioni}: 
-        \begin{itemize}
-            \item L’amministratore ha accesso all’interfaccia web del sistema;
-            \item L’amministratore è dotato dell’accesso alla dashboard;
-        \end{itemize}
-    \item \textbf{Postcondizioni}: Il sistema raccoglie le informazioni relative alle statistiche sulle parole più usate nelle richieste e le mostra nella dashboard;
-    \item \textbf{Scenario principale}:
-    \begin{enumerate}
-    \item L’amministratore accede all’interfaccia web di Vimar GENIALE;
-    \item Inserisce le proprie credenziali;
-    \item Il sistema riceve la richiesta di accesso e verifica le credenziali;
-    \item L’amministratore ottiene l’accesso alla dashboard;
-    \item Il sistema mostra le informazioni richieste sul cruscotto informativo.
-    \end{enumerate}
-    \item \textbf{Inclusioni}: UC 12 - Accesso al cruscotto informativo
-    \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
-\end{itemize}
-
-\subuc{Visualizzazione grafico dell’andamento giornaliero dell’utilizzo dell’applicativo sulla dashboard}{visualizzazione_grafico_andamento}
-\begin{itemize}
-    \item \textbf{Attori coinvolti}: Amministratore;
-    \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo il grafico dell’andamento giornaliero dell’utilizzo dell’applicativo;
-    \item \textbf{Precondizioni}: 
-        \begin{itemize}
-            \item L’amministratore ha accesso all’interfaccia web del sistema;
-            \item L’amministratore è dotato dell’accesso alla dashboard;
-        \end{itemize}
-    \item \textbf{Postcondizioni}: Il sistema raccoglie le informazioni, crea il grafico dell’andamento giornaliero dell’utilizzo dell’applicativo e lo mostra nella dashboard;
-    \item \textbf{Scenario principale}:
-    \begin{enumerate}
-    \item L’amministratore accede all’interfaccia web di Vimar GENIALE;
-    \item Inserisce le proprie credenziali;
-    \item Il sistema riceve la richiesta di accesso e verifica le credenziali;
-    \item L’amministratore ottiene l’accesso alla dashboard;
-    \item Il sistema mostra le informazioni richieste sul cruscotto informativo.
-    \end{enumerate}
-    \item \textbf{Inclusioni}: UC 12 - Accesso al cruscotto informativo
-    \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
-\end{itemize}
-
-\subuc{Visualizzazione numero risposte positive dal sistema di feedback sulla dashboard}{visualizzazione_risposte_positive}
+\subuc{Visualizzazione numero risposte positive dal sistema di feedback}{visualizzazione_risposte_positive}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Amministratore;
     \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo il numero delle risposte positive dal sistema di feedback;
@@ -500,7 +522,7 @@
     \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
 \end{itemize}
 
-\subuc{Visualizzazione numero risposte negative dal sistema di feedback sulla dashboard}{visualizzazione_risposte_negative}
+\subuc{Visualizzazione numero risposte negative dal sistema di feedback}{visualizzazione_risposte_negative}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Amministratore;
     \item \textbf{Descrizione}: Un amministratore desidera visualizzare dal cruscotto informativo il numero delle risposte negative dal sistema di feedback;
@@ -521,23 +543,93 @@
     \item \textbf{Inclusioni}: UC 12 - Accesso al cruscotto informativo
     \item \textbf{Generalizzazioni}: UC 14 - Visualizzazione informazioni sulla dashboard
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC14.png}
+\caption{UC14 - Visualizzazione informazioni dashboard}
+% \label{fig:UC1a}
+\end{figure}
+
 
 \uc{Richiesta di argomento proibito}{argomento_proibito}
 \begin{itemize}
     \item \textbf{Attori coinvolti}: Installatore;
-    \item \textbf{Descrizione}: L’installatore richiede argomenti proibiti al sistema (es. interrogazioni che non riguardano i prodotti VIMAR);
+    \item \textbf{Descrizione}: L’installatore richiede argomenti proibiti al sistema (e.g. politica, finanza, pornografia, ...);
     \item \textbf{Precondizioni}: 
         \begin{itemize}
             \item L’installatore ha accesso all’interfaccia web del sistema;
             \item L’installatore ha accesso ad una conversazione memorizzabile nel sistema;
-            \item La domanda posta non riguarda VIMAR.
+            \item La domanda posta non riguarda argomenti proibiti.
         \end{itemize}
     \item \textbf{Postcondizioni}: Il sistema restituisce una risposta che indica il motivo per cui si è verificato l’errore;
     \item \textbf{Scenario principale}:
     \begin{enumerate}
     \item L’installatore accede all’interfaccia web di Vimar GENIALE;
-    \item Inserisce una domanda inconsistente, che non ha a che vedere con VIMAR;
+    \item Inserisce una domanda inconsistente, che non ha a che vedere con prodotti VIMAR;
     \item Il sistema elabora la richiesta e fornisce una risposta che spiega la causa dell'errore riscontrato;
-    \item L’installatore visualizza le informazioni sull’errore che si è verificato.
+    \item L’installatore visualizza le informazioni sull’errore che si è verificato;
+    \end{enumerate}
+     \item \textbf{Generalizzazioni}: UC 8 - Assenza di informazioni sul prodotto ricercato.
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC15.png}
+\caption{UC15 - Richiesta di argomento proibito}
+% \label{fig:UC1a}
+\end{figure}
+
+\uc{Domanda al sisitema}{domanda}
+\begin{itemize}
+    \item \textbf{Attori coinvolti}: Installatore;
+    \item \textbf{Descrizione}: L’installatore inserisce una domanda;
+    \item \textbf{Precondizioni}: 
+        \begin{itemize}
+            \item L’installatore ha accesso all’interfaccia web del sistema;
+            \item L’installatore ha accesso ad una conversazione memorizzabile nel sistema;
+            \item L'installatore ha inviato una domanda al sistema;
+            \item La domanda posta non riguarda argomenti proibiti.
+        \end{itemize}
+    \item \textbf{Postcondizioni}: Il sistema restituisce una risposta;
+    \item \textbf{Scenario principale}:
+    \begin{enumerate}
+    \item L’installatore accede all’interfaccia web di Vimar GENIALE;
+    \item Inserisce una domanda che ha a che vedere con prodotti VIMAR e non con argomenti proibiti o sconosciuti;
+    \item Il sistema elabora la richiesta e fornisce una risposta;
+    \item L’installatore visualizza le informazioni restituite;
+    \end{enumerate}
+    \item \textbf{Estensioni}: UC 17 - Richiesta di uno schema o immagine.
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC16_activity.png}
+\caption{UC16 - Domanda al sisitema}
+% \label{fig:UC1a}
+\end{figure}
+
+\uc{Richiesta di uno schema o immagine}{domanda_immagine}
+\begin{itemize}
+    \item \textbf{Attori coinvolti}: Installatore;
+    \item \textbf{Descrizione}: L’installatore inserisce una domanda la cui risposta prevede uno schema elettrico o un'immagine;
+    \item \textbf{Precondizioni}: 
+        \begin{itemize}
+            \item L’installatore ha accesso all’interfaccia web del sistema;
+            \item L’installatore ha accesso ad una conversazione memorizzabile nel sistema;
+            \item L'installatore ha inviato una domanda al sistema;
+            \item La risposta alla domanda posta necessita, per essere completa, si uno schema elettrico o di un'immagine.
+        \end{itemize}
+    \item \textbf{Postcondizioni}: Il sistema restituisce una risposta con l'immagine o lo schema corretto;
+    \item \textbf{Scenario principale}:
+    \begin{enumerate}
+    \item L’installatore accede all’interfaccia web di Vimar GENIALE;
+    \item Inserisce una domanda che ha a che vedere con prodotti VIMAR;
+    \item Il sistema elabora la richiesta e fornisce una risposta inserendo uno schema o di un'immagine di cui la risposta ha bisogno per essere esaustiva;
+    \item L’installatore visualizza le informazioni restituite;
+    \item \textbf{Inclusioni}: UC 16 - Domanda al sistema.
     \end{enumerate}
 \end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{contents/casi_duso/png/UC17.png}
+\caption{UC17 - Richiesta di uno schema o immagine}
+% \label{fig:UC1a}
+\end{figure}
